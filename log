@@ -37,3 +37,8 @@ hashmap.c:59:8: error: ‘*map.buckets’ is used uninitialized [-Werror=uniniti
 cc1: all warnings being treated as errors
 Compilation failed
 9d8258f
+Wed 24 Apr 2024 09:31:09 PM UTC: 
+ hashmap.c | 1 +
+ 1 file changed, 1 insertion(+)
+ tests:  0|0
+04ff9b1
