@@ -69,8 +69,10 @@ HashMap * createMap(long capacity) {
     return map;
 }
 
-void eraseMap(HashMap * map,  char * key) {    
-
+void eraseMap(HashMap * map,  char * key) {   
+    void *dato = searchMap(map, key);
+    dato = NULL;
+    map->size--;
 
 }
 
