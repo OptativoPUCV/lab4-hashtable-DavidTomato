@@ -96,11 +96,11 @@ Pair * firstMap(HashMap * map) {
     while(x < map->capacity){
         if(map->buckets[x] != NULL){
           map->current = x;
+          printf("No hay elementos en la hash map");
           return map->buckets[x];
         }
         x++;
     }
-    printf("No hay elementos en la hash map");
     return NULL;
 }
 
