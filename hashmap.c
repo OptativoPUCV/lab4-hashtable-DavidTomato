@@ -93,13 +93,14 @@ Pair * searchMap(HashMap * map,  char * key) {
 
 Pair * firstMap(HashMap * map) {
     int x=0;
-    while(x < map->capacity-1){
+    while(x < map->capacity){
         if(map->buckets[x] != NULL){
           map->current = x;
           return map->buckets[x];
         }
         x++;
     }
+    printf("No hay elementos en la hash map");
     return NULL;
 }
 
