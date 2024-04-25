@@ -77,8 +77,6 @@ void eraseMap(HashMap * map,  char * key) {
         free(dato);
         map->buckets[x]->key = NULL;
     }
-    //map->size--;
-
 }
 
 Pair * searchMap(HashMap * map,  char * key) {   
@@ -94,8 +92,11 @@ Pair * searchMap(HashMap * map,  char * key) {
 }
 
 Pair * firstMap(HashMap * map) {
-
-    return NULL;
+    int x=0;
+    while(map->buckets[x]->key == NULL){
+        x++;
+    }
+    return map->buckets[x];
 }
 
 Pair * nextMap(HashMap * map) {
