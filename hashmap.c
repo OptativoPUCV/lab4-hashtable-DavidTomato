@@ -71,8 +71,11 @@ HashMap * createMap(long capacity) {
 
 void eraseMap(HashMap * map,  char * key) {   
     void *dato = searchMap(map, key);
-    dato = NULL;
-    map->size--;
+    if(dato != NULL){
+        map->size--;
+        free(dato);
+    }
+    //map->size--;
 
 }
 
