@@ -104,6 +104,14 @@ Pair * firstMap(HashMap * map) {
 }
 
 Pair * nextMap(HashMap * map) {
-
+    int x = map->current + 1;
+    while(x < map->capacity){
+        if(map->buckets[x] != NULL){
+          map->current = x;
+          return map->buckets[x];
+        }
+        x++;
+    }
     return NULL;
 }
+
